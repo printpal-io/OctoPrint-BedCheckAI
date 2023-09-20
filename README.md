@@ -24,7 +24,7 @@
   Bed Check AI uses Artificial Intelligence to detect your 3D printer's bed. The plugin takes the snapshot from any camera compatible with OctoPrint and runs it through a Machine Learning model that detects the entire print bed area. Based on the analysis, we can tell if:
 </p>
 <ul>
-  <li>The print bed is clear or the previous print</li>
+  <li>The print bed is clear of the previous print</li>
   <li>A foreign object is on the bed (clippers, tools, etc.)</li>
   <li>The location and sizes of any objects</li>
 </ul>
