@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="https://printpal.io/wp-content/uploads/2022/01/printwatch_logo_gh.png" width="600"/>
+    <img src="/extras/images/bed-check-ai.png" width="600"/>
     <br>
 <p>
 <p align="center">
@@ -47,7 +47,7 @@
     5. Search for <b>BedCheckAI</b>
 </p>
 <p>
-    6. Click <b>Install</b> on the PrintWatch Plugin
+    6. Click <b>Install</b> on the BedCheckAI Plugin
 </p>
 <p>
   7. Restart OctoPrint once Installation is completed
@@ -71,7 +71,7 @@
     3. Scroll down to the <b>Plugin Settings</b> in the left-side selection menu and select <b>'Bed Check AI'</b>
 </p>
 <p>
-    The Settings for PrintWatch include:
+    The Settings for BedCheckAI include:
 </p>
 <table>
   <tr>
