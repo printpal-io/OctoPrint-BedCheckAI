@@ -59,7 +59,7 @@ $(function() {
           } else if (plugin=="bedcheckai" && data.type=="queries") {
             new PNotify({
                 title: 'Max Bed Detections Reached',
-                text: 'Please register a free account on https://app.printpal.io to continue using the bed check AI feature (its still free, just verify your account).',
+                text: 'Please register a free account on <a href="https://app.printpal.io">https://app.printpal.io</a> to continue using the bed check AI feature (its still free, just verify your account).',
                 hide: true
             });
           } else if (plugin=="bedcheckai" && data.type=="camera") {
