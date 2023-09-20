@@ -146,6 +146,7 @@
         Check it out on the <a href="https://plugins.octoprint.org/plugins/printwatch/">OctoPrint Plugin Manager</a> or click <a href="https://github.com/printpal-io/OctoPrint-PrintWatch">here</a>
       </p>
       <br>
+        <img src="/extras/images/ai-example.gif"/>
       <br>
     </td>
   </tr>
