@@ -33,7 +33,7 @@ plugin_url = "https://github.com/printpal-io/OctoPrint-BedCheckAI"
 plugin_license = "AGPLv3"
 
 # Any additional requirements besides OctoPrint should be listed here
-plugin_requires = ["Pillow", "requests"]
+plugin_requires = ["requests"]
 
 ### --------------------------------------------------------------------------------------------------------------------
 ### More advanced options that you usually shouldn't have to touch follow after this point
