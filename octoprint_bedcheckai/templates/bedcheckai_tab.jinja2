@@ -1,0 +1,63 @@
+<h2>Bed Check AI <small>by printpal.io</small></h2>
+<div id="top-container" class="tab-content">
+  <div class="row-fluid">
+    <div class="well">
+    <p>
+      When using this plugin as a macro, add a set of G-code instructions in the beginning of your G-code file that places the print bed in the center of the camera's frame with no obstructions and add
+      <span class="label label-info">
+        @SEGMENTBED
+      </span>
+      immediately after to analyze your bed.
+    </p>
+    <p>
+      The print bed must be centered in the frame to be detected properly. See the documentation for more info. Use the 'Analyze Frame' button to compare the current webcam frame to the baseline, if it is set, otherwise set the baseline and repeat.
+    </p>
+  </div>
+  </div>
+  <div class="tab-content-plugin">
+    <h4>{{ _('Current Preview') }}</h4>
+    <div class="control-group">
+      <div class="controls">
+        <p>
+          <img alt="Segmentation preview" data-bind="visible: currentPreview() != null, attr: {src: currentPreview}">
+        </p>
+        <h5>{{ _('Current Loss: ') }}<span class="label label-info" id="lossVal" data-bind="text: currentLoss, visible: currentPreview() != null">0.0</span></h5>
+        <h5>{{ _('Bed Detected as: ') }}<span class="label label-info" id="bedStatus" data-bind="text: bedStatus, visible: bedStatus() != null, style : {backgroundColor : bedStatusColor() }"></span></h5>
+        <button class="btn btn-primary" data-bind="click: analyze_frame, enable: !analyzing(), css: {disabled: analyzing()}"><i class="fas" data-bind="css: {'fa-spinner fa-spin': analyzing(), 'fa-camera': !analyzing()}"></i> {{ _('Analyze Frame') }}</button>
+        <button class="btn btn-primary" data-bind="visible: currentPreview() != null, click: update_baseline, enable: !analyzing(), css: {disabled: analyzing()}"><i class="fas" data-bind="css: {'fa-spinner fa-spin': analyzing(), 'fa-camera': !analyzing()}"></i> {{ _('Set as Baseline') }}</button>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content-plugin">
+    <h4>{{ _('Baseline Preview') }}</h4>
+    <div class="control-group">
+      <div class="controls">
+        <p>
+          <img alt="Baseline preview" data-bind="visible: currentBaseline != null, attr: {src: currentBaseline}">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top:1%">
+  <li style="display:inline">
+    <a href="https://printpal.io/" target="_blank" rel="noreferrer noopener">
+      <i class="fas fa-home"></i> {{ _('Website') }}
+    </a>
+  </li>
+  <li style="display:inline">
+    <a href="https://github.com/printpal-io/OctoPrint-PrintWatch" target="_blank" rel="noreferrer noopener">
+      <i class="fab fa-github-square"></i> {{ _('Github') }}
+    </a>
+  </li>
+  <li style="display:inline">
+    <a href="https://discord.com/invite/yhkcZYmg" target="_blank" rel="noreferrer noopener">
+      <i class="fab fa-discord"></i> {{ _('Discord') }}
+    </a>
+  </li>
+  <li style="display:inline">
+    <a href="https://printpal.io/documentation/" target="_blank" rel="noreferrer noopener">
+      <i class="fas fa-book"></i> {{ _('Documentation') }}
+    </a>
+  </li>
+</div>

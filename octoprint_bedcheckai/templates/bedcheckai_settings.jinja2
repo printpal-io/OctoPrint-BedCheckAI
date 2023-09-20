@@ -1,0 +1,72 @@
+<h2>Bed Check AI <small>by printpal.io</small></h2>
+<div class="row-fluid">
+  <div class="well">
+    <p>
+      When using this plugin as a macro, add a set of G-code instructions in the beginning of your G-code file that places the print bed in the center of the camera's frame with no obstructions and add
+      <span class="label label-info">
+        @SEGMENTBED
+      </span>
+      immediately after to analyze your bed.
+    </p>
+    <p>
+      The print bed must be centered in the frame to be detected properly. See the documentation for more info. Use the 'Test' button to compare the current webcam frame to the baseline, if it is set, otherwise set the baseline and repeat.
+    </p>
+  </div>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        <div class="control-group">
+          <label class="control-label"><strong>{{ _('Snapshot URL') }}</strong></label>
+          <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.bedcheckai.snapshot_url">
+            <div class="well">
+              <p>
+                The webcam snapshot URL that will be used for detection. In most cases this will be the same as the Webcam URL used by OctoPrint in the 'Webcam & Timelapse' section.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label"><strong>{{ _('API Key') }}</strong></label>
+          <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.bedcheckai.api_key">
+            <div class="well">
+              <p>
+                Obtain for free from app.printpal.io. Unregistered accounts limited to 20 bed checks before requiring verification.
+              </p>
+            </div>
+          </div>
+        </div>
+        <label class="control-label"><strong>{{ _('Detection Threshold') }}</strong></label>
+          <div class="controls">
+            <input type="range" min="0" max="100" class="slider" id="threshold" style='display:inline-block' data-bind="value: settings.plugins.bedcheckai.threshold" oninput="updateDisplay();">
+            <label class="range" id="display" style='display:inline-block'></label>
+            <div class="well">
+              <p>
+                "Loss" values higher than this will be classified as the bed not being clear. Values lower mean the bed is clear.
+              </p>
+            </div>
+          </div>
+          <script>
+            function updateDisplay() {
+              document.getElementById("display").innerText = (document.getElementById("threshold").value / 1000).toFixed(3);
+            }
+          </script>
+        <div class="controls">
+          <label class="checkbox">
+            <input type="checkbox" data-bind="checked: settings.plugins.bedcheckai.cancel_print"><strong> {{ _('Cancel print') }}</strong>
+            <div class="help-block">{{ _('Cancel the print if the bed is detected to be not cleared.') }}</div>
+          </label>
+        </div>
+        <div class="controls">
+          <label class="checkbox">
+            <input type="checkbox" data-bind="checked: settings.plugins.bedcheckai.pause_print"><strong> {{ _('Pause print') }}</strong>
+            <div class="help-block">{{ _('Pause the print if the bed is detected to be not cleared.') }}</div>
+          </label>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

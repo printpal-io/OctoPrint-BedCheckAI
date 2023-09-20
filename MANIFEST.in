@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_bedcheckai/templates *
+recursive-include octoprint_bedcheckai/translations *
+recursive-include octoprint_bedcheckai/static *
