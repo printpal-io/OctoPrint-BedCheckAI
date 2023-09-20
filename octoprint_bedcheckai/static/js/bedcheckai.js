@@ -21,16 +21,16 @@ $(function() {
           if (plugin=="bedcheckai" && data.type=="atcommand"){
             if (data.status == 8000) {
               self.currentPreview(data.mask_preview);
-              self.currentLoss(response.loss.toFixed(8));
+              self.currentLoss(data.loss.toFixed(8));
               let result_title = '';
-              if (response.loss >= response.threshold) {
+              if (data.loss >= data.threshold) {
                 self.bedStatus("NOT CLEAR");
                 self.bedStatusColor("red");
                 result_title = 'BED NOT CLEAR';
               } else {
                 self.bedStatus("CLEAR");
                 self.bedStatusColor("green");
-                result_title = 'BED CLEAR';                
+                result_title = 'BED CLEAR';
               }
 
               new PNotify({
