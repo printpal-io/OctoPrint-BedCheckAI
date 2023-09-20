@@ -144,8 +144,8 @@ class BedCheckAIPlugin(
                         self._printer.cancel_print(tags={self._identifier})
                     elif self._settings.get(["pause_print"]):
                         self._printer.pause_print(tags={self._identifier})
-                message["type"] = 'atcommand'
-                self._plugin_manager.send_plugin_message(self._identifier, message)
+                r_["type"] = 'atcommand'
+                self._plugin_manager.send_plugin_message(self._identifier, r_)
             except Exception as e:
                 self._logger.info(e)
 

@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="/extras/images/bed-check-ai.png" width="600"/>
+    <img src="https://printpal.io/wp-content/uploads/2022/01/printwatch_logo_gh.png" width="600"/>
     <br>
 <p>
 <p align="center">
@@ -24,7 +24,7 @@
   Bed Check AI uses Artificial Intelligence to detect your 3D printer's bed. The plugin takes the snapshot from any camera compatible with OctoPrint and runs it through a Machine Learning model that detects the entire print bed area. Based on the analysis, we can tell if:
 </p>
 <ul>
-  <li>The print bed is clear of the previous print</li>
+  <li>The print bed is clear or the previous print</li>
   <li>A foreign object is on the bed (clippers, tools, etc.)</li>
   <li>The location and sizes of any objects</li>
 </ul>
@@ -146,7 +146,6 @@
         Check it out on the <a href="https://plugins.octoprint.org/plugins/printwatch/">OctoPrint Plugin Manager</a> or click <a href="https://github.com/printpal-io/OctoPrint-PrintWatch">here</a>
       </p>
       <br>
-        <img src="/extras/images/ai-example.gif" width="600"/>
       <br>
     </td>
   </tr>

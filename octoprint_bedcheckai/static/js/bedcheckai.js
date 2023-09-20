@@ -19,7 +19,26 @@ $(function() {
 
         self.onDataUpdaterPluginMessage = function(plugin, data){
           if (plugin=="bedcheckai" && data.type=="atcommand"){
-            self.contents(data.image);
+            self.currentPreview(data.image);
+            if (data.status == 8000) {
+              let result_title = '';
+              if (data.loss <= data.threshold) {
+                result_title = 'BED CLEAR';
+              } else {
+                result_title = 'BED NOT CLEAR';
+              }
+              new PNotify({
+                  title: result_title,
+                  text: 'Loss: ' + data.loss ,
+                  hide: true
+              });
+            } else {
+              new PNotify({
+                  title: 'Error Analyzing Bed',
+                  text: 'Status: ' + data.status,
+                  hide: true
+              });
+            }
           } else if (plugin=="bedcheckai" && data.type=="baseline") {
             console.log('Got plugin message: ' + data);
             new PNotify({
