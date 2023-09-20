@@ -87,7 +87,7 @@
       API Key
     </td>
     <td>
-      The secret key used to authenticate API usage. Get yours Free <a href="https://printpal.io/pricing/">here</a>
+      The secret key used to authenticate API usage. Get yours Free <a href="https://printpal.io/printwatch/#pricing">here</a>
     </td>
   </tr>
   <tr>
