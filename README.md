@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="https://printpal.io/wp-content/uploads/2022/01/printwatch_logo_gh.png" width="600"/>
+    <img src="/extras/images/bed-check-ai.png" width="600"/>
     <br>
 <p>
 <p align="center">
