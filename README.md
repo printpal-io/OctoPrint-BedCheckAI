@@ -138,14 +138,15 @@
     <p>
     <h4>PrintWatch AI monitoring & Remote Access</h4>
     <p>
-      This plugin monitors your prints in real-time for defects and failures and notifies you<br> 
-      and/or pauses the print so you save time, material, and gain peace of mind. This plugin<br> 
+      This plugin monitors your prints in real-time for defects and failures and notifies you<br>
+      and/or pauses the print so you save time, material, and gain peace of mind. This plugin<br>
       also allows you to remotely view and manage your printer from anywhere in the world.
     </p>
       <p>
         Check it out on the <a href="https://plugins.octoprint.org/plugins/printwatch/">OctoPrint Plugin Manager</a> or click <a href="https://github.com/printpal-io/OctoPrint-PrintWatch">here</a>
       </p>
       <br>
+      <img src="/extras/images/ai-example.gif" width="600"/>
       <br>
     </td>
   </tr>

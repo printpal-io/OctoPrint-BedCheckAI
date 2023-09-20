@@ -19,8 +19,8 @@ $(function() {
 
         self.onDataUpdaterPluginMessage = function(plugin, data){
           if (plugin=="bedcheckai" && data.type=="atcommand"){
-            self.currentPreview(data.image);
             if (data.status == 8000) {
+              self.currentPreview(data.mask_preview);
               let result_title = '';
               if (data.loss <= data.threshold) {
                 result_title = 'BED CLEAR';

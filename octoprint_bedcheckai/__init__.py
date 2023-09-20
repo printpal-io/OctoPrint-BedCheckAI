@@ -139,7 +139,7 @@ class BedCheckAIPlugin(
             try:
                 r_ = self.analyze(compare=True)
                 self._logger.info("Segment analysis: {}".format(r_))
-                if r_:
+                if r_.get("loss") >= (self._settings.get_int(["threshold"]) / 1000):
                     if self._settings.get(["cancel_print"]):
                         self._printer.cancel_print(tags={self._identifier})
                     elif self._settings.get(["pause_print"]):
@@ -147,7 +147,7 @@ class BedCheckAIPlugin(
                 r_["type"] = 'atcommand'
                 self._plugin_manager.send_plugin_message(self._identifier, r_)
             except Exception as e:
-                self._logger.info(e)
+                self._logger.info('Error processing @ command: {}'.format(str(e)))
 
     def get_update_information(self):
         return {
