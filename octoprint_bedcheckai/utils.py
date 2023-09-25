@@ -1,7 +1,7 @@
 import requests
 from base64 import b64encode
 
-ROUTE = 'http://173.230.133.178:8888'
+ROUTE = 'https://octoprint.printpal.io'
 SEGMENT_ENDPOINT = '/api/v2/segment'
 CLIENT_TIMEOUT = 30.0
 
