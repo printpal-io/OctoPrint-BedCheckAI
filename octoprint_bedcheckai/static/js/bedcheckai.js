@@ -72,7 +72,7 @@ $(function() {
             if (data.result == 'fail') {
               new PNotify({
                   title: 'Error retrieveing baseline',
-                  text: 'Set a baseline image.',
+                  text: 'Set a baseline image: ' + data.info,
                   hide: true
               });
             } else {
