@@ -91,7 +91,7 @@ class BedCheckAIPlugin(
         r_ = get_baseline_(self._settings)
         if r_ is None or r_.get("status") != 8000:
             # Issue
-            info_ = r_ if r_ is not None else 'None'
+            info_ = str(r_) if r_ is not None else 'None'
             self._plugin_manager.send_plugin_message(self._identifier, dict(type="baseline_get", result="fail", info=info_))
         else:
             mask_ = 'data:image/png;charset=utf-8;base64,' + r_.get("items", {}).get("status", {}).get("mask").split('\n')[0]
