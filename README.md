@@ -32,6 +32,9 @@
   Setup
 </h3>
 <p>
+    <strong>Watch the <a href="https://www.youtube.com/watch?v=QYbQ0HupWe4" target="_blank" rel="noreferrer noopener">Quick Start Video here</a></strong>
+</p>
+<p>
     1. Open the <b>OctoPrint Web Inferface</b>
 </p>
 <p>
