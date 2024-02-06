@@ -71,16 +71,3 @@ def snap_sync(url : str) -> bytes:
     r = _get(url)
     return r.content if r.status_code == 200 else False
 
-'''
-if __name__ == '__main__':
-    params_ = {
-        'api_key' : 'fmu_6be6bda1a4724a4ba09299ca78b3c637',
-        'printer_id' : 'pid1',
-        'unique_id' : '0f5603c5de344313b2c62cff75b5fad1'
-    }
-    r = _get(route='http://173.230.133.178:8888', endpoint='/api/v2/segment/set_baseline', params=params_)
-    if r.status_code == 200:
-        r = r.json()
-        if r.get("status") == 8000:
-            print(r)
-'''
